@@ -106,7 +106,7 @@ map <F7> :emenu SetSpell.<Tab>
 imap <F8> <Esc> z=<CR>i
 map <F8> z=<CR>
 
-set colorcolumn=100
+set colorcolumn=120
 set ruler
 set number
 set relativenumber
@@ -181,6 +181,9 @@ endfunction
 vmap <C-x> :!pbcopy<CR>  
 vmap <C-c> :w !pbcopy<CR><CR> 
 "set clipboard=unnamedplus
+
+"CtrlSF auto type
+map <C-f> <Plug>CtrlSFPrompt
 
 " relative numbers
 function! NumberToggle()
