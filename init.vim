@@ -197,3 +197,10 @@ endfunc
 nnoremap <C-z> :call NumberToggle()<cr>
 autocmd InsertEnter * :set relativenumber!
 autocmd InsertLeave * :set relativenumber
+
+" Easy Align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
