@@ -37,11 +37,6 @@ map Q gq
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
@@ -141,6 +136,13 @@ set iminsert=0
 set imsearch=0
 
 set tags=.tags
+
+" For NERDTree
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
+
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -204,3 +206,10 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Convert Ruby 1.8 to 1.9 hash syntax
+nnoremap <Leader>: :%s/:\([^ ]*\)\(\s*\)=>/\1:/gc<CR>
+
+" Add whitespace inside of braces {}
+nnoremap <Leader>{ :%s/{\([^ ]\)/{ \1/gc<CR>
+nnoremap <Leader>} :%s/\([^ ]\)}/\1 }/gc<CR>
