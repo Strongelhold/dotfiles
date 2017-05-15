@@ -1,3 +1,25 @@
+" List of plugs
+" - ag
+" - ctrlp
+" - ctrlsf
+" - emmet-vim
+" - nerdcommenter
+" - nerdtree-git-pugin
+" - nerdtree
+" - supertab
+" - vim-airline
+" - vim-bundler
+" - vim-dispatch
+" - vim-easy-align
+" - vim-endwise
+" - vim-fugitive
+" - vim-gitgutter
+" - vim-rails
+" - vim-surround
+" - vim-sync
+" - rubocop
+" - deoplete ?
+
 " To use it, copy it to
 "     for Unix and OS/2:  ~/.vimrc
 "	      for Amiga:  s:.vimrc
@@ -26,9 +48,6 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
