@@ -120,9 +120,7 @@ autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.yml :%s/\s\+$//e
 autocmd BufWritePre *.php :%s/\s\+$//e
-let g:nerdtree_tabs_open_on_console_startup=1
 map <silent> <C-n> :NERDTreeFocus<CR>
-set runtimepath^=~/.config/nvim/bundle/ctrlp.vim
 set background=dark
 colorscheme deep-space
 let g:user_emmet_expandabbr_key = '<C-e>'
@@ -137,11 +135,15 @@ set imsearch=0
 
 set tags=.tags
 
+" For CtrlP
+set runtimepath^=~/.config/nvim/bundle/ctrlp.vim
+
 " For NERDTree
 " enable line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+let g:nerdtree_tabs_open_on_console_startup=1
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
